@@ -70,7 +70,7 @@ while True:
         # Store face positions for smoothing
         face_history.append((x, y, w, h))
 
-        # Compute moving average of the last 5 frames
+        # Compute moving average of the last 10 frames
         x = int(np.mean([pos[0] for pos in face_history]))
         y = int(np.mean([pos[1] for pos in face_history]))
         w = int(np.mean([pos[2] for pos in face_history]))
