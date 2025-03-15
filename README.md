@@ -16,7 +16,7 @@ Finally, we can be CAPYBARAs🦫  <br>
 cap = cv2.VideoCapture(0)
 ```
 
-Opens the default camera (0) 
+- Opens the default camera (0) 
 
 <br><br>
 
@@ -78,12 +78,38 @@ The filter can be **toggled ON/OFF** with the `F` key.
 ### **Face Detection & Mask Application**
 
 - The program detects faces using the **Haar Cascade Classifier** (`haarcascade_frontalface_default.xml`).
+   ```python
+   haar_cascade_path = 'haarcascade_frontalface_default.xml'
+   ...
+   face_cascade = cv2.CascadeClassifier(haar_cascade_path)
+   ...
+   faces = face_cascade.detectMultiScale(gray, scaleFactor=1.3, minNeighbors=5, minSize=(50, 50))
+   ```
+  <br>
+  
 - When a face is detected, a **Capybara mask (`capy.png`)** is applied over the face.
+   ```python
+    if filter_enabled:
+            overlay_image(frame, filter_img, x - int(w * 0.1), y - int(h * 0.4), int(w * 1.4), int(h * 1.5))
+   ```
     - The **filter size** adjusts dynamically based on the detected face size.
+
+  <br>
+  
 - **Smoothing Algorithm**:
     
     ```python
     face_history = deque(maxlen=10)
+    ```
+    ```python
+    # Store face positions for smoothing
+    face_history.append((x, y, w, h))
+    
+    # Compute moving average of the last 10 frames
+    x = int(np.mean([pos[0] for pos in face_history]))
+    y = int(np.mean([pos[1] for pos in face_history]))
+    w = int(np.mean([pos[2] for pos in face_history]))
+    h = int(np.mean([pos[3] for pos in face_history]))
     ```
     
     - Uses a **moving average** of the last 10 face positions to reduce trembling and improve stability.
