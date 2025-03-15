@@ -28,7 +28,7 @@ if filter_img is None:
     raise FileNotFoundError(f"Filter image '{filter_path}' not found.")
 
 # Queue to store face positions for smoothing
-face_history = deque(maxlen=10)  # Store last 5 detections
+face_history = deque(maxlen=10)  # Store last 10 detections
 
 # Toggle flag for filter display
 filter_enabled = False
