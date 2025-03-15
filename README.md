@@ -94,7 +94,7 @@ The filter can be **toggled ON/OFF** with the `F` key.
 
 ---
 
-*For Computer Vision *
+*For Computer Vision*
 
 <br>
 
