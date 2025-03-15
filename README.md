@@ -64,8 +64,11 @@ _Of course these letters are not recorded!_
 
 
 ## **Capybara Filter 🦫**
-![capy](https://github.com/user-attachments/assets/9a7ddfa7-3ad4-4035-a32c-2bbc42f068c5)
-![output](https://github.com/user-attachments/assets/efa62335-eb93-410e-a11e-93d24579bf17)
+<img src = "https://github.com/user-attachments/assets/9a7ddfa7-3ad4-4035-a32c-2bbc42f068c5" width="20%" height="20%">
+<img src = "https://github.com/user-attachments/assets/efa62335-eb93-410e-a11e-93d24579bf17" width="40%" height="40%">
+<img src = "https://github.com/user-attachments/assets/9a7ddfa7-3ad4-4035-a32c-2bbc42f068c5" width="20%" height="20%">
+
+
 
 The filter can be **toggled ON/OFF** with the `F` key.
 
