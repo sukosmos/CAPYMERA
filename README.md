@@ -38,12 +38,22 @@ out = cv2.VideoWriter('output.avi', fourcc, 20.0, (frame_width, frame_height))
   <img src = "https://github.com/user-attachments/assets/9154cb61-c415-4fc5-b22b-be53956912c1" width="40%" height="40%">
   <img src = "https://github.com/user-attachments/assets/130c31f7-6f64-48ce-a036-d26f1cfebb36" width="40%" height="40%">
 
+  ```python
+     if recording:
+        out.write(frame)
+        cv2.putText(display_frame, 'Recording...', (10, 70), cv2.FONT_HERSHEY_SIMPLEX, 1, (10, 10, 200), 2)
+    else:
+        cv2.putText(display_frame, 'Ready to Record', (10, 70), cv2.FONT_HERSHEY_SIMPLEX, 1, (25, 200, 50), 2)
+
+    # Show frame
+    cv2.imshow('Video Recorder', display_frame)
+```
+
 - **On**: Displays **"Recording..."** in **red** text.                   
 
 - **Off**: Displays **"Ready to Record"** in **green** text.
 
     
-_Of course these letters are not recorded!_
 <br><br>
 
 
@@ -55,7 +65,13 @@ _Of course these letters are not recorded!_
 | `ESC` | Exit the program |
 | `F` | Toggle the Capybara Filter ON/OFF |
 
+ ```python
+display_frame = frame.copy()
+    cv2.putText(display_frame, 'Record: Space | Exit: ESC | Filter: F', (10, 30), cv2.FONT_HERSHEY_SIMPLEX, 0.6, (255, 255, 255), 1)
+```
+<br><br>
 
+_Using `disply_frame`, of course these letters are not recorded!_
 
 <br><br>
 <br><br>
