@@ -98,10 +98,10 @@ while True:
     # Show current filter status
     if filter_enabled:
         cv2.putText(display_frame, f'Filter: {selected_filter.upper()}', 
-                    (10, 60), cv2.FONT_HERSHEY_SIMPLEX, 0.6, (0, 255, 255), 2)
+                    (10, 60), cv2.FONT_HERSHEY_SIMPLEX, 0.6, (0, 255, 255), 1)
     else:
         cv2.putText(display_frame, 'Filter: OFF', 
-                    (10, 60), cv2.FONT_HERSHEY_SIMPLEX, 0.6, (100, 100, 100), 2)
+                    (10, 60), cv2.FONT_HERSHEY_SIMPLEX, 0.6, (100, 100, 100), 1)
 
     if recording:
         out.write(frame)
