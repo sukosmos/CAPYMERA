@@ -141,7 +141,7 @@ The filter can be **toggled ON/OFF** with the `F` key.
 
 
 ## **ver 2.0: Added Otter Filter** 
-Due to the popularity of the **Capybara filter**, we have now added an **Otter filter**!🦦  
+Due to the popularity of the **Capybara filter**, now added an **Otter filter**!🦦  
 <img src =  "https://github.com/user-attachments/assets/055545f9-e943-4f9d-8ce7-523f51fc8ccf" width="20%" height="20%">
 <img src = "https://github.com/user-attachments/assets/25f6e949-ec29-47e5-ade2-6375f066a645" width="40%" height="40%">
 <img src = "https://github.com/user-attachments/assets/055545f9-e943-4f9d-8ce7-523f51fc8ccf" width="20%" height="20%">
