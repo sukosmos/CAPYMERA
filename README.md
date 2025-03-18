@@ -137,6 +137,48 @@ The filter can be **toggled ON/OFF** with the `F` key.
 
 
 
+# **Update**  
+
+
+## **ver 2.0: Added Otter Filter** 
+Due to the popularity of the **Capybara filter**, we have now added an **Otter filter**!🦦  
+<img src =  "https://github.com/user-attachments/assets/055545f9-e943-4f9d-8ce7-523f51fc8ccf" width="20%" height="20%">
+<img src = "https://github.com/user-attachments/assets/25f6e949-ec29-47e5-ade2-6375f066a645" width="40%" height="40%">
+<img src = "https://github.com/user-attachments/assets/055545f9-e943-4f9d-8ce7-523f51fc8ccf" width="20%" height="20%">
+
+_Plus, I resized the images' location to fit on a face_
+
+<br><br>
+
+
+### **1. Filter Status Display**  
+
+added a text to display the **current filter status**.  
+
+```python
+if filter_enabled:
+    cv2.putText(display_frame, f'Filter: {selected_filter.upper()}',
+                (10, 60), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 255, 255), 2)
+else:
+    cv2.putText(display_frame, 'Filter: OFF',
+                (10, 60), cv2.FONT_HERSHEY_SIMPLEX, 1, (100, 100, 100), 2)
+```
+- **active**: "Filter: CAPY" or "Filter: OTTER"
+- **not active**: "Filter: OFF"  
+
+<br><br>
+
+### **2. New Key Bindings**  
+
+| Key | Action |
+|------|--------|
+| `C` | Toggle the **Capybara** Filter ON |
+| `O` | Toggle the **Otter** Filter ON |
+
+<br><be>
+
+
+
 ---
 
 *For Computer Vision*
